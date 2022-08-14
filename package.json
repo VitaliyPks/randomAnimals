@@ -1,0 +1,14 @@
+{
+  "name": "random",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd backend && npm i && cd ../frontend && npm i && npm run build",
+    "start": "cd backend && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
