@@ -5,6 +5,7 @@ import newDog from '../redux/actionCreators/dogsAC';
 function Dog() {
   const dispatch = useDispatch();
   const { dog } = useSelector((state) => state.dogReducer);
+  document.title = 'Dogs'
 
   async function handleDogLoad() {
     const respone = await fetch('/api/dog');

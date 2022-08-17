@@ -5,6 +5,7 @@ import newCat from '../redux/actionCreators/catsAC';
 function Cat() {
   const dispatch = useDispatch();
   const { cat } = useSelector((state) => state.catReducer);
+  document.title = 'Cats'
 
   async function handleCatLoad() {
     const respone = await fetch('/api/cat');

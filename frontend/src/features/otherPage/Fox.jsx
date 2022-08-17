@@ -5,6 +5,7 @@ import newFox from '../redux/actionCreators/foxesAC';
 function Fox() {
   const dispatch = useDispatch();
   const { fox } = useSelector((state) => state.foxReducer);
+  document.title = 'Foxes'
 
   async function handleFoxLoad() {
     const respone = await fetch('/api/fox');

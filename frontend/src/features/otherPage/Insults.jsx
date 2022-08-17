@@ -5,6 +5,7 @@ import newInsult from '../redux/actionCreators/insultsAC';
 function Insults() {
   const dispatch = useDispatch();
   const { insult } = useSelector((state) => state.insultReducer);
+  document.title = 'Insults'
 
   async function handleInsultLoad() {
     const respone = await fetch('/api/insult');
