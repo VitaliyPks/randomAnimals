@@ -6,7 +6,7 @@ function Header() {
       <Link to='/' className='mx-auto'>Home</Link>
       <Link to='/dog' className='mx-auto'>Dogs</Link>
       <Link to='/cat' className='mx-auto'>Cats</Link>
-      <Link to='/fox' className='mx-auto'>Fox</Link>
+      <Link to='/fox' className='mx-auto'>Foxes</Link>
       <Link to='/insults' className='mx-auto'>Insults</Link>
     </nav>
   );

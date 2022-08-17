@@ -5,12 +5,15 @@ import Fox from './features/otherPage/Fox.jsx';
 import Insults from './features/otherPage/Insults.jsx';
 import Header from './features/main/Header.jsx';
 import Body from './features/main/Body.jsx';
+import Home from './features/main/Home.jsx';
 
 function App() {
+  document.title = 'Random animals'
   return (
     <Body>
       <Header />
       <Routes >
+        <Route path='/' element={<Home />} />
         <Route path='/dog' element={<Dog />} />
         <Route path='/cat' element={<Cat />} />
         <Route path='/fox' element={<Fox />} />
