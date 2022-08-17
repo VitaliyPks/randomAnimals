@@ -2,6 +2,10 @@
   "name": "random",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  
   "scripts": {
     "postinstall": "cd backend && npm i && cd ../frontend && npm i && npm run build",
     "start": "cd backend && npm start",

@@ -2,8 +2,8 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function Body({ children }) {
-  const path = useLocation().pathname;
   const [backG, setBackG] = useState("bg-[url('/public/img/fon.png')] bg-cover bg-center min-w-full min-h-screen");
+  const path = useLocation().pathname;
 
   useEffect(() => {
     switch (path) {
