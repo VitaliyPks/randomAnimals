@@ -8,7 +8,6 @@ import Body from './features/main/Body.jsx';
 import Home from './features/main/Home.jsx';
 
 function App() {
-  document.title = 'Random animals'
   return (
     <Body>
       <Header />
