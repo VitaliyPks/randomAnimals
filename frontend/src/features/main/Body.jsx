@@ -12,7 +12,7 @@ function Body({ children }) {
       case '/dog':
         return setBackG(() => "bg-[url('/public/img/dogs.jpg')] bg-repeat min-w-full min-h-screen");
       case '/cat':
-        return setBackG(() => "bg-[url('/public/img/cats.jpg')] bg-repeat min-w-full min-h-screen");
+        return setBackG(() => "bg-[url('/public/img/cats.jpg')] bg-center bg-cover min-w-full min-h-screen");
       case '/fox':
         return setBackG(() => "bg-[url('/public/img/foxes.jpg')] bg-repeat min-w-full min-h-screen");
       case '/insults':
