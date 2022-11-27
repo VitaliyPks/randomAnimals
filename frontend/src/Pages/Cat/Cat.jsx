@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Contents from "../../../Components/Contents/Contents";
+import Contents from "../../Components/Contents/Contents";
 import { catLoad, clearImage } from "../../redux/main.slice";
 
 function Cat() {

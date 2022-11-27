@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import Contents from '../../../Components/Contents/Contents';
+import Contents from '../../Components/Contents/Contents';
 import { clearImage, foxLoad } from '../../redux/main.slice';
 
 function Fox() {
@@ -8,7 +8,7 @@ function Fox() {
   document.title = base
 
   return (
-    <Contents 
+    <Contents
       title={base}
       error={error}
       picture={fox}

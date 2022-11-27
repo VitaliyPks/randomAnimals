@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { toggleBurger } from "../redux/main.slice";
+import { toggleBurger } from "../../redux/main.slice";
 import "./header.scss";
 
 function Header() {
   const base = "Header";
   const dispatch = useDispatch()
   const { active } = useSelector( state => state.main)
-  // const [active, setActive] = useState(false);
 
   const handleBurger = () => {
     dispatch(toggleBurger());

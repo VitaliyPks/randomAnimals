@@ -47,7 +47,7 @@
         padding: 10px 10px 10px 35px;
         background: rgb(255,255,255);
         background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(222,222,222,1) 40%, rgba(90,208,255,1) 100%);
-        position: absolute;
+        position: fixed;
         top: -10px;
         left: -455px;
         display: flex;
@@ -64,12 +64,17 @@
     }
 
     &_burger-container{
-        z-index: 2;
-        padding: 8px;
-        padding-top: 10px;
-        background-color: rgba($color: #dedede, $alpha: 0.9);
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+      position: fixed;
+      z-index: 2;
+      padding: 8px;
+      padding-top: 10px;
+      background-color: rgba($color: #dedede, $alpha: 0.9);
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+
+      &:hover{
+        box-shadow: 0px 0px 13px rgba($color: #8a8a8a, $alpha: 1.0);
+      }
     }
 
     &_burger {

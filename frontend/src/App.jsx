@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Insults from './features/Pages/Insult/Insults.jsx';
-import Header from './features/main/Header.jsx';
-import Body from './features/main/Body.jsx';
-import Home from './features/main/Home.jsx';
-import Cat from './features/Pages/Cat/Cat.jsx';
-import Dog from './features/Pages/Dog/Dog.jsx';
-import Fox from './features/Pages/Fox/Fox.jsx';
+import Insults from './Pages/Insult/Insults.jsx';
+import Header from './Components/Header/Header.jsx';
+import Body from './Components/Body/Body.jsx';
+import Home from './Pages/Home/Home.jsx';
+import Dog from './Pages/Dog/Dog.jsx';
+import Cat from './Pages/Cat/Cat.jsx';
+import Fox from './Pages/Fox/Fox.jsx';
 
 function App() {
   return (

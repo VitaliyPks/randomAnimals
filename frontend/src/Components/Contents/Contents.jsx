@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { closeBurger } from "../../features/redux/main.slice";
+import { closeBurger } from "../../redux/main.slice";
 import Loader from "../Loader/Loader";
 import "./contents.scss";
 
@@ -41,7 +41,6 @@ function Contents({
       {picture ? (
         <div className={`${base}_content`}>
           <img
-            // style={{ opacity: "1" }}
             className={`${base}_picture`}
             src={picture}
             alt="Изображение"
