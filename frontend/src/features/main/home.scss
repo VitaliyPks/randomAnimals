@@ -1,0 +1,21 @@
+.Home{
+    margin: auto;
+    max-width: 60vw;
+    margin-top: 100px;
+    padding: 14px;
+    border-radius: 8px;
+    background-color: rgba($color: #dedede, $alpha: 0.8);
+
+    &_text{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 414px) {
+    .Home{
+        margin-top: 20px;
+        max-width: 70vw;
+    }
+}

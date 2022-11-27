@@ -1,0 +1,126 @@
+.Header {
+    background-color: rgba($color: #dedede, $alpha: 0.9);
+    max-width: 80vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 16px 10px 16px;
+    margin: auto;
+
+  &_links {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  &_link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(69, 69, 69);
+
+    &:hover {
+      color: rgb(90, 208, 255);
+    }
+
+    &-active {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgb(90, 208, 255);
+    }
+  }
+
+  &_burger {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .Header {
+    padding-top: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: inherit;
+
+    &_links{
+        padding: 10px 10px 10px 35px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(222,222,222,1) 40%, rgba(90,208,255,1) 100%);
+        position: absolute;
+        top: -10px;
+        left: -455px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        width: 100vw;
+        transition: all 0.6s ease 0s;
+    }
+
+    &_links.active{
+        transition: all 0.6s ease 0s;
+        left: -22px;
+    }
+
+    &_burger-container{
+        z-index: 2;
+        padding: 8px;
+        padding-top: 10px;
+        background-color: rgba($color: #dedede, $alpha: 0.9);
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    &_burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    &_burger span,
+    &_burger::before,
+    &_burger::after {
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.6s ease 0s;
+      background-color: rgb(0, 0, 0);
+    }
+
+    &_burger::before,
+    &_burger::after {
+      content: "";
+    }
+
+    &_burger::before {
+      top: 0;
+    }
+
+    &_burger::after {
+      bottom: 0;
+    }
+
+    &_burger span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
+
+    &_burger.active span {
+      transform: scale(0) translate(0px, -50%);
+    }
+
+    &_burger.active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &_burger.active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+  }
+}

@@ -1,13 +1,71 @@
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { toggleBurger } from "../redux/main.slice";
+import "./header.scss";
 
 function Header() {
+  const base = "Header";
+  const dispatch = useDispatch()
+  const { active } = useSelector( state => state.main)
+  // const [active, setActive] = useState(false);
+
+  const handleBurger = () => {
+    dispatch(toggleBurger());
+  };
+
   return (
-    <nav className="opacity-90 rounded-b-lg mx-auto w-4/5 h-12 flex justify-center px-5 bg-gray-500 items-center text-white">
-      <Link to='/' className='mx-auto'>Home</Link>
-      <Link to='/dog' className='mx-auto'>Dogs</Link>
-      <Link to='/cat' className='mx-auto'>Cats</Link>
-      <Link to='/fox' className='mx-auto'>Foxes</Link>
-      <Link to='/insults' className='mx-auto'>Insults</Link>
+    <nav className={base}>
+      <div className={active ? `${base}_links active` : `${base}_links`}>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? `${base}_link-active` : `${base}_link`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/dog"
+          className={({ isActive }) =>
+            isActive ? `${base}_link-active` : `${base}_link`
+          }
+        >
+          Dogs
+        </NavLink>
+        <NavLink
+          to="/cat"
+          className={({ isActive }) =>
+            isActive ? `${base}_link-active` : `${base}_link`
+          }
+        >
+          Cats
+        </NavLink>
+        <NavLink
+          to="/fox"
+          className={({ isActive }) =>
+            isActive ? `${base}_link-active` : `${base}_link`
+          }
+        >
+          Foxes
+        </NavLink>
+        <NavLink
+          to="/insults"
+          className={({ isActive }) =>
+            isActive ? `${base}_link-active` : `${base}_link`
+          }
+        >
+          Insults
+        </NavLink>
+      </div>
+      <div className={`${base}_burger-container`}>
+        <div
+          className={active ? `${base}_burger active` : `${base}_burger`}
+          onClick={handleBurger}
+        >
+          <span></span>
+        </div>
+      </div>
     </nav>
   );
 }

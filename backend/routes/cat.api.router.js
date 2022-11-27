@@ -2,7 +2,9 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
   try {
+    console.log('TUT');
     const response = await fetch('https://aws.random.cat/meow');
+    console.log(response, 'responseresponse');
     const data = await response.json();
 
     if (data) { return res.status(200).json(data.file); }
