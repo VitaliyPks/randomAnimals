@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import './body.scss'
 
 function Body({ children }) {
   const [backG, setBackG] = useState(
@@ -39,7 +40,7 @@ function Body({ children }) {
     }
   }, [path]);
 
-  return <div className={backG}>{children}</div>;
+  return <div id="main-body" className={backG}>{children}</div>;
 }
 
 export default Body;
