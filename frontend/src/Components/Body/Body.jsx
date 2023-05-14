@@ -31,6 +31,7 @@ function Body({ children }) {
             "bg-[url('/src/images/foxes.jpg')] bg-repeat min-w-full min-h-screen"
         );
       case "/insults":
+        
         return setBackG(
           () =>
             "bg-[url('/src/images/insult.jpg')] bg-cover bg-center min-w-full min-h-screen"
