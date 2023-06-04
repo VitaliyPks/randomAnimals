@@ -20,8 +20,6 @@ function Contents({
   const isInsults = useLocation().pathname.includes("insults");
   document.title = title;
 
-  console.log(isInsults, "isInsults");
-
   const handleLoad = () => {
     dispatch(loadFunc());
   };
