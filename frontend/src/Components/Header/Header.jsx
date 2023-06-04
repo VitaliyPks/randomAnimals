@@ -2,6 +2,11 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toggleBurger } from "../../redux/main.slice";
+import { ReactComponent as HomeIcon } from '../../assets/images/home-icon.svg'
+import { ReactComponent as CatIcon } from '../../assets/images/cat-icon.svg'
+import { ReactComponent as DogIcon } from '../../assets/images/dog-icon.svg'
+import { ReactComponent as FoxIcon } from '../../assets/images/fox-icon.svg'
+import { ReactComponent as InsultIcon } from '../../assets/images/message-icon.svg'
 import "./header.scss";
 
 function Header() {
@@ -17,45 +22,51 @@ function Header() {
     <nav className={base}>
       <div className={active ? `${base}_links active` : `${base}_links`}>
         <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? `${base}_link-active` : `${base}_link`
-          }
+        to="/"
+        className={({ isActive }) =>
+          isActive ? `${base}_link active` : `${base}_link`
+        }
         >
-          Home
+          <span className={`${base}_text`}>Home</span>
+          <span className={`${base}_icon`}><HomeIcon/></span>
         </NavLink>
         <NavLink
-          to="/dog"
-          className={({ isActive }) =>
-            isActive ? `${base}_link-active` : `${base}_link`
-          }
+        to="/dog"
+        className={({ isActive }) =>
+          isActive ? `${base}_link active` : `${base}_link`
+        }
         >
-          Dogs
+          <span className={`${base}_text`}>Dogs</span>
+          <span className={`${base}_icon`}><DogIcon/></span>
         </NavLink>
         <NavLink
-          to="/cat"
-          className={({ isActive }) =>
-            isActive ? `${base}_link-active` : `${base}_link`
-          }
+        to="/cat"
+        className={({ isActive }) =>
+          isActive ? `${base}_link active` : `${base}_link`
+        }
         >
-          Cats
+          <span className={`${base}_text`}>Cats</span>
+          <span className={`${base}_icon`}><CatIcon/></span>
         </NavLink>
         <NavLink
-          to="/fox"
-          className={({ isActive }) =>
-            isActive ? `${base}_link-active` : `${base}_link`
-          }
+        to="/fox"
+        className={({ isActive }) =>
+          isActive ? `${base}_link active` : `${base}_link`
+        }
         >
-          Foxes
+          <span className={`${base}_text`}>Foxes</span>
+          <span className={`${base}_icon`}><FoxIcon/></span>
         </NavLink>
         <NavLink
-          to="/insults"
-          className={({ isActive }) =>
-            isActive ? `${base}_link-active` : `${base}_link`
-          }
+        to="/insults"
+        className={({ isActive }) =>
+          isActive ? `${base}_link active` : `${base}_link`
+        }
         >
-          Insults
+          <span className={`${base}_text`}>Insults</span>
+          <span className={`${base}_icon`}><InsultIcon/></span>
         </NavLink>
+      <div className={`${base}_indicator`}></div>
       </div>
       <div className={`${base}_burger-container`}>
         <div

@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import './body.scss'
 
 function Body({ children }) {
   const [backG, setBackG] = useState(
@@ -30,6 +31,7 @@ function Body({ children }) {
             "bg-[url('/src/images/foxes.jpg')] bg-repeat min-w-full min-h-screen"
         );
       case "/insults":
+        
         return setBackG(
           () =>
             "bg-[url('/src/images/insult.jpg')] bg-cover bg-center min-w-full min-h-screen"
@@ -39,7 +41,7 @@ function Body({ children }) {
     }
   }, [path]);
 
-  return <div className={backG}>{children}</div>;
+  return <div id="main-body" className={backG}>{children}</div>;
 }
 
 export default Body;
