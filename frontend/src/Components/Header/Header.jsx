@@ -25,7 +25,7 @@ function Header() {
   useEffect(() => {
     const link = document.querySelectorAll(".Header_link");
     const activeLinkcoor = document.querySelector(".active");
-    console.log(link, activeLinkcoor);
+
     if (link && activeLinkcoor) {
       const linxX = link[0].getBoundingClientRect().x;
       const activeLinkX = activeLinkcoor.getBoundingClientRect().x;
