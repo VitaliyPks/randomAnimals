@@ -146,7 +146,7 @@ a .Header_text {
   transform: translateY(-50px);
 }
 
-@media (max-width: 414px) {
+@media (max-width: 566px) {
   .Header {
     padding-top: 0;
     position: relative;
@@ -165,7 +165,7 @@ a .Header_text {
       );
       position: fixed;
       top: 0px;
-      left: -455px;
+      left: -110%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;

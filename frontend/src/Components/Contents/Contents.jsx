@@ -38,7 +38,7 @@ function Contents({
       <button type="button" className={`${base}_button`} onClick={handleLoad}>
         Нажми меня
       </button>
-      {picture ? (
+      {false ? (
         <div className={`${base}_content`}>
           <img
             className={`${base}_picture`}
@@ -47,7 +47,7 @@ function Contents({
             onError={handleError}
           />
         </div>
-      ) : loading ? (
+      ) : true ? (
         <Loader />
       ) : text ? (
         <div className={`${base}_content`}>

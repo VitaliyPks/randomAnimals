@@ -3,3 +3,10 @@
   box-shadow: inset 0vw 145px 4vw rgba(0,0,0);
 
 }
+
+@media (max-width: 566px) {
+  #main-body{
+    box-shadow: inset 0vw 4vw 4vw rgba(0,0,0);
+  
+  }
+}

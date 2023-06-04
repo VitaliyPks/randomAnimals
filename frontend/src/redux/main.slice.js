@@ -85,7 +85,7 @@ const mainSlice = createSlice({
       state.insult = "";
     },
     closeBurger(state) {
-      // state.active = false;
+      state.active = false;
     },
     toggleBurger(state) {
       state.active = !state.active;
