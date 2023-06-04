@@ -2,7 +2,7 @@
   height: 70px;
   box-sizing: border-box;
   background-color: rgba($color: #dedede, $alpha: 0.9);
-  max-width: 80vw;
+  width: 80vw;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 0px 30px 10px 30px;
@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+    width: 100%;
   }
 
   &_icon {
@@ -90,18 +91,7 @@
 
     &.active {
       z-index: 1;
-      // position: relative;
-      // width: 70px;
-      // height: 70px;
-      // font-family: Verdana, Geneva, Tahoma, sans-serif;
-      // font-weight: 500;
-      // font-size: 20px;
       color: rgb(90, 208, 255);
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // flex-direction: column;
-      // text-align: center;
     }
   }
 
@@ -109,25 +99,6 @@
     display: none;
   }
 
-  &_links a:nth-child(1).active ~ &_indicator {
-    transform: translateX(0);
-  }
-
-  &_links a:nth-child(2).active ~ &_indicator {
-    transform: translateX(calc(80vw - 61.7vw));
-  }
-
-  &_links a:nth-child(3).active ~ &_indicator {
-    transform: translateX(calc(80vw - 43.45vw));
-  }
-
-  &_links a:nth-child(4).active ~ &_indicator {
-    transform: translateX(calc(80vw - 25.1vw));
-  }
-
-  &_links a:nth-child(5).active ~ &_indicator {
-    transform: translateX(calc(80vw - 6.8vw));
-  }
 }
 
 .Header_link.active .Header_icon {
