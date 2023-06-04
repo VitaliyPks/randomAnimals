@@ -26,7 +26,7 @@ function Contents({
   };
 
   useEffect(() => {
-    dispatch(closeBurger())
+    dispatch(closeBurger());
 
     return () => {
       dispatch(clearFunc());

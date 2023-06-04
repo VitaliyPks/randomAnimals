@@ -43,36 +43,36 @@ const dogLoad = createAsyncThunk(
 );
 
 const foxLoad = createAsyncThunk(
-    "main/foxLoad",
-  
-    async (_, { rejectWithValue }) => {
-      try {
-        const respone = await fetch("/api/fox");
-  
-        const data = await respone.json();
-  
-        return data;
-      } catch (error) {
-        return { error: error.message };
-      }
-    }
-  );
+  "main/foxLoad",
 
-  const insultLoad = createAsyncThunk(
-    "main/insultLoad",
-  
-    async (_, { rejectWithValue }) => {
-      try {
-        const respone = await fetch("/api/insult");
-  
-        const data = await respone.json();
-  
-        return data;
-      } catch (error) {
-        return { error: error.message };
-      }
+  async (_, { rejectWithValue }) => {
+    try {
+      const respone = await fetch("/api/fox");
+
+      const data = await respone.json();
+
+      return data;
+    } catch (error) {
+      return { error: error.message };
     }
-  );
+  }
+);
+
+const insultLoad = createAsyncThunk(
+  "main/insultLoad",
+
+  async (_, { rejectWithValue }) => {
+    try {
+      const respone = await fetch("/api/insult");
+
+      const data = await respone.json();
+
+      return data;
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+);
 
 const mainSlice = createSlice({
   name: "main",
@@ -84,12 +84,12 @@ const mainSlice = createSlice({
       state.fox = "";
       state.insult = "";
     },
-    closeBurger(state){
-        state.active = false
+    closeBurger(state) {
+      // state.active = false;
     },
-    toggleBurger(state){
-        state.active = !state.active
-    }
+    toggleBurger(state) {
+      state.active = !state.active;
+    },
   },
   extraReducers: (builder) => {
     builder
