@@ -16,18 +16,21 @@ function Header() {
   const { pathname } = useLocation();
   const { active } = useSelector((state) => state.main);
   const { windowSize } = useWindowSize();
-  const [xCoor, setXCoor] = useState(null);
+  const [xCoor, setXCoor] = useState("0px");
 
   const handleBurger = () => {
     dispatch(toggleBurger());
   };
 
   useEffect(() => {
-    const link = document
-      .querySelectorAll(".Header_link")[0]
-      .getBoundingClientRect().x;
-    const coor = document.querySelector(".active").getBoundingClientRect().x;
-    setXCoor(`${coor - link}px`);
+    const link = document.querySelectorAll(".Header_link");
+    const activeLinkcoor = document.querySelector(".active");
+    console.log(link, activeLinkcoor);
+    if (link && activeLinkcoor) {
+      const linxX = link[0].getBoundingClientRect().x;
+      const activeLinkX = activeLinkcoor.getBoundingClientRect().x;
+      setXCoor(`${activeLinkX - linxX}px`);
+    }
   }, [pathname, windowSize]);
 
   return (
