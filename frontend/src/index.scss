@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    margin: 0px;  
+body {
+  margin: 0px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
