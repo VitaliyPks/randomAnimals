@@ -89,13 +89,6 @@
       color: rgb(90, 208, 255);
     }
 
-    &:active,
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      outline: none;
-    }
-
     &.active {
       z-index: 1;
       color: rgb(90, 208, 255);
